@@ -7,18 +7,16 @@ from datetime import date
 from telebot import types
 # Создаем экземпляр бота
 bot = telebot.TeleBot('5678481348:AAFQVdgC2ko0owkeJ80E3h3-6sqktM7alz8')
-db = pyodbc.connect(driver='{SQL Server}',
-                      server='SHADI\msqlserver',
-                      database='zaimit',
-                      user='user',
-                      password='sa')
+db = pyodbc.connect(driver='{MySQL ODBC 8.0 ANSI Driver}',
+                      server='localhost',
+                      database='zaimit_microloan',
+                      user='root',
+                      password='_OldMan325_')
 
 print(db)
 # Функция, обрабатывающая команду /start
 @bot.message_handler(commands=["start"])
 def start(message):
-    global newuserflag
-    newuserflag = 0
     chat_id = message.chat.id
     first_name = message.chat.first_name
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -32,6 +30,8 @@ def handle_text(message):
         global pass_id
         pass_id = message.text
         cursor.execute(f"SELECT client_number FROM tblClient WHERE client_number = {pass_id}")
+        global newuserflag
+        newuserflag = 0
         data = cursor.fetchone()
         db.commit()
         if data is None:
