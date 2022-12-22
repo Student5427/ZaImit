@@ -13,7 +13,7 @@ $form = ActiveForm::begin(['id' => 'login-form', 'options' => ['class' => 'horiz
 
 <?= $form->field($client, 'client_secondname') ?>
 
-<?= $form->field($client, 'client_pasport') ?>
+<?= $form->field($client, 'client_passport') ?>
 
 <?= $form->field($client, 'client_birthday') ?>
 

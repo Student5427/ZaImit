@@ -243,10 +243,10 @@ class SiteController extends Controller
 
     public function actionDelete($id)
     {
-        $client = Clients::findOne($id);
-        if ($client)
+        $reg = TblRegist::find()->where(['id_regist'=>$id])->one();
+        if ($reg)
         {
-            $client->delete();
+            $reg->delete();
             return $this->redirect('index.php?r=site%2Fclients');
         }
 

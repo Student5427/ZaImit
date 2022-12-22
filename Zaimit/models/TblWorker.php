@@ -12,7 +12,7 @@ use Yii;
  * @property string $worker_surname
  * @property string|null $worker_secondname
  * @property string $worker_birthday
- * @property string $worker_pasport
+ * @property string $worker_passport
  * @property string $worker_date
  * @property int $worker_countm
  * @property int $is_admin
@@ -33,11 +33,11 @@ class TblWorker extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['worker_name', 'worker_surname', 'worker_birthday', 'worker_pasport', 'worker_date', 'worker_countm', 'is_admin'], 'required'],
+            [['worker_name', 'worker_surname', 'worker_birthday', 'worker_passport', 'worker_date', 'worker_countm', 'is_admin'], 'required'],
             [['worker_birthday', 'worker_date'], 'safe'],
             [['worker_countm', 'is_admin'], 'integer'],
             [['worker_name', 'worker_surname', 'worker_secondname'], 'string', 'max' => 50],
-            [['worker_pasport'], 'string', 'max' => 11],
+            [['worker_passport'], 'string', 'max' => 11],
         ];
     }
 
@@ -52,7 +52,7 @@ class TblWorker extends \yii\db\ActiveRecord
             'worker_surname' => 'Worker Surname',
             'worker_secondname' => 'Worker Secondname',
             'worker_birthday' => 'Worker Birthday',
-            'worker_pasport' => 'Worker Pasport',
+            'worker_passport' => 'Worker Passport',
             'worker_date' => 'Worker Date',
             'worker_countm' => 'Worker Countm',
             'is_admin' => 'Is Admin',

@@ -14,7 +14,7 @@ echo GridView::widget([
     'columns' => [
         ['label' => 'ID', 'value' => 'id_worker'], ['label' => 'Фамилия', 'value' => 'worker_surname'],
         ['label' => 'Имя', 'value' => 'worker_name'], ['label' => 'Отчество', 'value' => 'worker_secondname'],
-        ['label' => 'Серия и номер паспорта', 'value' => 'worker_pasport'], ['label' => 'Дата приема на работу', 'value' => 'worker_date'],
+        ['label' => 'Серия и номер паспорта', 'value' => 'worker_passport'], ['label' => 'Дата приема на работу', 'value' => 'worker_date'],
         ['label' => 'Количество клиентов', 'value' => 'worker_countm'], ['label' => 'Дата рождения', 'value' => 'worker_birthday'],
         ['label' => 'Наличие прав администратора', 'value' => 'is_admin'], [
             'class' => ActionColumn::class,

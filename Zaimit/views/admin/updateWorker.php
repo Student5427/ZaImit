@@ -12,7 +12,7 @@ $form = ActiveForm::begin(['id' => 'login-form', 'options' =>['class' => 'horizo
 
 <?= $form->field($worker, 'worker_secondname')?>
 
-<?= $form->field($worker, 'worker_pasport')?>
+<?= $form->field($worker, 'worker_passport')?>
 
 <?= $form->field($worker, 'worker_date')?>
 

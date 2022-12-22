@@ -10,7 +10,7 @@ echo "<tr>";
     echo "<td>{$worker['worker_surname']}</td>";
     echo "<td>{$worker['worker_name']}</td>";
     echo "<td>{$worker['worker_secondname']}</td>";
-    echo "<td>{$worker['worker_pasport']}</td>";
+    echo "<td>{$worker['worker_passport']}</td>";
     echo "<td>{$worker['worker_date']}</td>";
     echo "<td>{$worker['worker_countm']}</td>";
     echo "<td>{$worker['worker_birthday']}</td>";
