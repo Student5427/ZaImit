@@ -1,0 +1,24 @@
+.body-content .row img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.body-content .row h1 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: #9d9d9d;
+}
+.body-content .row p {
+    color: #9d9d9d;
+}
+.body-content .row h5 {
+    color: #9d9d9d;
+}
+.body-content .row .carousel-control{
+    border-radius: 10px;
+}
+.body-content .row .members {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
