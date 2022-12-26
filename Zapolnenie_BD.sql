@@ -12,17 +12,13 @@ values ('Вукол', 'Живкин', 'Теодорович', '2002-12-13', 5555
 	   ('Рогнеда', 'Кеглина', 'Лазарьевна', '1991-12-13', 7777777777, '2022-09-01', 0, 0),
 	   ('Зотик', 'Майдыков', 'Спиридонович', '1965-12-13', 8888888888, '2022-09-01', 0, 0);
 
-insert tblLoan (id_client, id_worker, loan_sum, loan_percent, loan_start, loan_end, loan_date_pay, loan_sum_pay)
-values (1, 2, 20000, 4, '2022-10-10', '2022-11-10', 09, 0),
-       (2, 2, 10000, 5, '2022-10-25', '2022-12-31', 25, 0),
-       (3, 3, 15000, 3, '2022-10-27', '2022-11-03', 02, 0);
-
-
-insert tblDebt (id_loan, debt_days, debt_penny, debt_sum)
-values (1, 30, 6, 80000);
+insert tblLoan (id_client, id_worker, loan_sum, loan_percent, loan_start, loan_end, loan_sum_pay, loan_status)
+values (1, 2, 20000, 4, '2022-10-10', '2022-11-10', 0, 'Не погашен'),
+       (2, 2, 10000, 5, '2022-10-25', '2022-12-31', 0, 'Не погашен'),
+       (3, 3, 15000, 3, '2022-10-27', '2022-11-03', 0, 'Не погашен');
 
 insert tblPay (id_loan, pay_date, pay_sum)
-values (2, '2022-11-25', 11000), (3, '2022-11-02', 17250);
+values (2, '2022-11-25', 11000), (3, '2022-11-02', 18150);
 
 insert tblAuth (id_worker, auth_login, auth_pass)
 values (2, 'worker1', 'worker1'),
@@ -30,13 +26,11 @@ values (2, 'worker1', 'worker1'),
 	   (4, 'worker3', 'worker3'),
 	   (5, 'worker4', 'worker4');
 
-
 insert tblInfReg (infreg_date, infreg_time, infreg_emp)
-values ('2023-01-01', '10:00', 0),
-	   ('2023-01-01', '11:00', 0),
-	   ('2023-01-02', '10:00', 0),
-	   ('2023-01-02', '11:00', 0);
+values ('2022-12-28', '10:00', 0),
+	   ('2022-12-28', '11:00', 0),
+	   ('2022-12-29', '10:00', 0),
+	   ('2022-12-29', '11:00', 0);
 
 insert tblRegist (regist_name, regist_surname, regist_secondname, regist_number, regist_date, regist_time)
-values ('Борис', 'Орлов', 'Сергеевич', 89999999999, '2023-01-01', '11:00'),
-       ('Федор', 'Федоров', 'Федорович', 89000000000, '2023-01-02', '10:00');
+values ('Борис', 'Орлов', 'Сергеевич', 89999999999, '2022-12-28', '11:00');

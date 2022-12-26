@@ -14,8 +14,9 @@ use Yii;
  * @property float $loan_percent
  * @property string $loan_start
  * @property string $loan_end
- * @property string $loan_date_pay
+ * @property string $loan_sum_result
  * @property float $loan_sum_pay
+ * @property string $loan_status
  */
 class TblLoan extends \yii\db\ActiveRecord
 {
@@ -33,10 +34,10 @@ class TblLoan extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_client', 'id_worker', 'loan_sum', 'loan_percent', 'loan_start', 'loan_end', 'loan_date_pay', 'loan_sum_pay'], 'required'],
+            [['id_client', 'id_worker', 'loan_sum', 'loan_percent', 'loan_start', 'loan_end',  'loan_sum_pay', 'loan_status',], 'required'],
             [['id_client', 'id_worker'], 'integer'],
             [['loan_sum', 'loan_percent', 'loan_sum_pay'], 'number'],
-            [['loan_start', 'loan_end', 'loan_date_pay'], 'safe'],
+            [['id_client', 'id_worker', 'loan_sum', 'loan_percent', 'loan_start', 'loan_end', 'loan_sum_result', 'loan_sum_pay', 'loan_status',], 'safe'],
         ];
     }
 
@@ -53,8 +54,9 @@ class TblLoan extends \yii\db\ActiveRecord
             'loan_percent' => 'Loan Percent',
             'loan_start' => 'Loan Start',
             'loan_end' => 'Loan End',
-            'loan_date_pay' => 'Loan Date Pay',
+            'loan_sum_result' => 'Loan Sum Result',
             'loan_sum_pay' => 'Loan Sum Pay',
+	    'loan_status' => 'Loan Status',
         ];
     }
 }

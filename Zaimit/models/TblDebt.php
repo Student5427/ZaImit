@@ -29,9 +29,9 @@ class TblDebt extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_loan', 'debt_days', 'debt_penny', 'dent_sum'], 'required'],
+            [['id_loan', 'debt_days', 'debt_penny', 'debt_sum'], 'required'],
             [['id_loan', 'debt_days'], 'integer'],
-            [['debt_penny', 'dent_sum'], 'number'],
+            [['debt_penny', 'debt_sum'], 'number'],
         ];
     }
 
@@ -45,7 +45,7 @@ class TblDebt extends \yii\db\ActiveRecord
             'id_loan' => 'Id Loan',
             'debt_days' => 'Debt Days',
             'debt_penny' => 'Debt Penny',
-            'dent_sum' => 'Dent Sum',
+            'debt_sum' => 'Dent Sum',
         ];
     }
 }

@@ -212,10 +212,19 @@ class SiteController extends Controller
         if ($loan->load(Yii::$app->request->post())) {
             $loan->id_worker = Yii::$app->user->identity->id_worker;
             $loan->id_client = $id;
+            $loan->loan_status = "Не погашен";
+            $loan->loan_sum_pay = 0;
             $loan->save();
              return $this->redirect('index.php?r=site%2Fclients');
             }
         return $this->render('updateTblLoan', ['model'=>$loan]);
+    }
+
+    public function actionMicroloans()
+    {
+        $pagination = new Pagination(['defaultPageSize'=>10]);
+        $dataProvider = new ActiveDataProvider(['query' => TblLoan::find(), 'pagination' => $pagination]);
+        return $this->render('microloans', ['dataProvider'=>$dataProvider,]);
     }
 
     public function actionAdd_pay($id)

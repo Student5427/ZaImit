@@ -15,8 +15,6 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'loan_percent') ?>
     <?= $form->field($model, 'loan_start') ?>
     <?= $form->field($model, 'loan_end') ?>
-    <?= $form->field($model, 'loan_date_pay') ?>
-    <?= $form->field($model, 'loan_sum_pay') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Подтвердить', ['class' => 'btn typicalbtn']) ?>

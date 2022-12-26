@@ -43,7 +43,8 @@ AppAsset::register($this);
                 ['label' => 'Домашняя страница', 'url' => ['/site/index']],
                 ['label' => 'Профиль', 'url' => ['/site/profile'], 'visible' => !Yii::$app->user->isGuest,],
                 ['label' => 'Клиенты', 'url' => ['/site/clients'], 'visible' => !Yii::$app->user->isGuest,],
-                ['label' => 'Зарегистрированные', 'url' => ['/site/registrations'], 'visible' => !Yii::$app->user->isGuest,],
+                ['label' => 'Займы', 'url' => ['/site/microloans'], 'visible' => !Yii::$app->user->isGuest,],
+                ['label' => 'Записи в филиал', 'url' => ['/site/registrations'], 'visible' => !Yii::$app->user->isGuest,],
                 ['label' => 'Сотрудники', 'url' => ['/admin/workers'], 'visible' => (Yii::$app->user->isGuest ? FALSE : Yii::$app->user->identity->isAdmin()),],
                 Yii::$app->user->isGuest ? (['label' => 'Войти', 'url' => ['/site/login']]
                 ) : ('<li>'
